@@ -58,18 +58,25 @@ export default function QRScanner() {
   return(
     <Container className="main row p-0 m-0" style={{height: "100vh"}} fluid>
       <Container style={{height: "60vh",width: "100vw", background: "#2c2f40"}} className="main p-0 m-0">
-        <NavBar/>
-        <QrReader
-          style={{width: "40vh", height: "30vh"}}
-          delay={delay}
-          onError={handleError}
-          onScan={handleScan}
-          className="some"
+      <NavBar show={true}/>
+        <div>
+          {attendance && 
+            <div className="main attendance-heading">
+              <h5>Attendance Complete!!</h5>
+            </div>
+          }
+          <QrReader
+            style={{width: "40vh", height: "30vh"}}
+            delay={delay}
+            onError={handleError}
+            onScan={handleScan}
+            className="some"
           />
+        </div>
       </Container>
       <Container fluid style={{height: "40vh", width: "100vw"}} className="main p-0 m-0 justify-content-evenly">
         <div><img style={{height: "39vh"}} src={qrImg} alt="qrImg"/></div>
-        <div className="heading"><div className="react-heading">React</div> QR Attendance</div>
+        <div className="heading breakpoint"><div className="react-heading">React</div> QR Attendance</div>
       </Container>
     </Container>
   )

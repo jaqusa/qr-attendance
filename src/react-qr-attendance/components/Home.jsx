@@ -6,6 +6,7 @@ import SecureRoute from './SecureRoute'
 import TeacherLogin from './TeacherLogin'
 import TeacherQRForm from './TeacherQRForm'
 import StudentLogin from './StudentLogin'
+import AttendanceDetails from './AttendanceDetails'
 
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
           <Route exact path="/" component={StudentLogin}/>
           <Route exact path="/teacher-login" component={TeacherLogin}/>
           <SecureRoute exact path="/make-qr" component={TeacherQRForm}/>
+          <SecureRoute exact path="/get-details" component={AttendanceDetails}/>
           <SecureRoute exact path="/scan-qr" component={QRScanner}/>
         </Switch>
       </Context>
