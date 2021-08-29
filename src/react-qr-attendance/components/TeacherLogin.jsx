@@ -25,13 +25,15 @@ export default function Signup() {
       {redirectPossible && <Redirect to="/make-qr" />}
       {currentUser && <Redirect to="/make-qr" />}
       <NavBar show={false}/>
-      <Container className="main">
+      <Container className="main row">
         <div className="main heading breakpoint" style={{color: "#c7ccec"}}>QR Attendance</div>
         <GoogleButton
           onClick={handleSigninWithGoogle}
           disabled={loading}
-          className="style-button"
+          className="style-button pl-0"
+          style={{textAlign: "start"}}
         />
+        <div className="d-flex justify-content-center" ><a className="href-style m-0 pl-2" href="/student-login">Login as student</a></div>
       </Container>
     </Container>
   )

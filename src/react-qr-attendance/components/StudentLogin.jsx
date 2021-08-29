@@ -32,8 +32,10 @@ export default function Signup() {
         <GoogleButton
           onClick={handleSigninWithGoogle}
           disabled={loading}
-          className="style-button"
+          className="style-button pl-0"
+          style={{textAlign: "start"}}
         />
+        <div className="d-flex justify-content-center" ><a className="href-style m-0 pl-2" href="/teacher-login">Login as Teacher</a></div>
       </Container>
     </Container>
   )
