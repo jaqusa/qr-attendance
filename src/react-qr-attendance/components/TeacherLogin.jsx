@@ -1,4 +1,4 @@
-import React,{ useState } from 'react'
+import React from 'react'
 import { Container } from 'react-bootstrap'
 import { Redirect } from 'react-router-dom'
 import { useAuth } from "../Context"
@@ -14,7 +14,6 @@ export default function Signup() {
     try{
       setLoading(true)
       await signinWithGoogle()
-      localStorage.setItem("role", "student")
       setRedirectPossible(true)
       setLoading(false)
     }catch(err){
