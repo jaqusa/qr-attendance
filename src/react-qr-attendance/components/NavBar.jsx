@@ -10,6 +10,7 @@ export default function NavBar({show}) {
   const [redirectPossible, setRedirectPossible] = useState(false)
   function something() {
     setRedirectPossible(true)
+    localStorage.removeItem("role")
     logout()
   }
   const { logout } = useAuth()

@@ -16,9 +16,9 @@ export default function Home() {
         <Switch>
           <Route exact path="/" component={StudentLogin}/>
           <Route exact path="/teacher-login" component={TeacherLogin}/>
-          <SecureRoute exact path="/make-qr" component={TeacherQRForm}/>
-          <SecureRoute exact path="/get-details" component={AttendanceDetails}/>
-          <SecureRoute exact path="/scan-qr" component={QRScanner}/>
+          <SecureRoute exact path="/make-qr" role="teacher" component={TeacherQRForm}/>
+          <SecureRoute exact path="/get-details" role="teacher" component={AttendanceDetails}/>
+          <SecureRoute exact path="/scan-qr" role="student" component={QRScanner}/>
         </Switch>
       </Context>
     </Router>
