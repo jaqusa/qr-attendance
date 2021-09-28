@@ -54,7 +54,7 @@ export default function QRScanner() {
         })
       }
     }
-  }, [result, course, attendanceAt, instructor, delay, currentUser.email, currentUser.name])
+  }, [result, course, attendanceAt, instructor, delay, currentUser.email, currentUser.name, currentUser.displayName])
   return(
     <Container className="main row p-0 m-0" style={{height: "100vh"}} fluid>
       <Container style={{height: "60vh",width: "100vw", background: "#2c2f40"}} className="main p-0 m-0">

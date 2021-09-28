@@ -33,7 +33,7 @@ export default function AttendanceDetails() {
       console.log(docs)
       })
     }
-  }, [runEffect])
+  }, [runEffect, attendanceAt, course, instructor])
   return (
     <Container className="row m-0 p-0" style={{height: "100vh"}} fluid>
       {attendees.length > 0 && runEffect ?
