@@ -4,7 +4,7 @@ import qrCode from 'qrcode'
 import { useAuth } from '../Context'
 import { Container, FormControl, Button, Image, Form} from "react-bootstrap";
 import { database } from '../Firebase'
-import NavBar from './NavBar'
+import NavBar from '../components/NavBar'
 
 export default function TeacherQRForm() {
   const [course, setCourse] = useState('')
