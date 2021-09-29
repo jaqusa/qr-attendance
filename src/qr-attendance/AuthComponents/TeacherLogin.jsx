@@ -1,4 +1,4 @@
-import React,{ useState } from 'react'
+import React, { useState } from 'react'
 import { Container } from 'react-bootstrap'
 import { Redirect } from 'react-router-dom'
 import { useAuth } from "../Context"
@@ -14,7 +14,10 @@ export default function Signup() {
     try{
       setLoading(true)
       await signinWithGoogle()
+<<<<<<< HEAD:src/qr-attendance/AuthComponents/TeacherLogin.jsx
       localStorage.setItem("role", "teacher")
+=======
+>>>>>>> 762da23547290080cc82aaded16eb2ae19da8a84:src/react-qr-attendance/components/TeacherLogin.jsx
       setRedirectPossible(true)
       setLoading(false)
     }catch(err){
