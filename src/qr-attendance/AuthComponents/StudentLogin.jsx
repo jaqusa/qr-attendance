@@ -30,7 +30,7 @@ export default function Signup() {
     <Container className="main login p-0 m-0" fluid style={{height: "100vh"}}>
       {redirectPossible && <Redirect to="/scan-qr" />}
       {currentUser && (
-        role ==="student" ? <Redirect to={'/scan-qr'}/> : <Redirect to={'/make-qr'}/> 
+        role ==="student" ? <Redirect to={'/make-qr'}/> : <Redirect to={'/scan-qr'}/> 
       )}
       <NavBar show={false}/>
       <Container className="main row">
