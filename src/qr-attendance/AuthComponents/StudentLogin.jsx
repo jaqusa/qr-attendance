@@ -1,8 +1,4 @@
-<<<<<<< HEAD:src/qr-attendance/AuthComponents/StudentLogin.jsx
-import React,{ useState, useEffect } from 'react'
-=======
-import React, { useState } from 'react'
->>>>>>> 762da23547290080cc82aaded16eb2ae19da8a84:src/react-qr-attendance/components/StudentLogin.jsx
+import React, { useState, useEffect } from 'react'
 import { Container } from 'react-bootstrap'
 import { Redirect } from 'react-router-dom'
 import { useAuth } from "../Context"
