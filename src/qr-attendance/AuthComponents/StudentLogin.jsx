@@ -12,7 +12,6 @@ export default function Signup() {
   const [role, setRole] = useState("")
   useEffect(() => {
     setRole(localStorage.getItem("role"))
-    console.log(role)
   }, [])
   async function handleSigninWithGoogle(e){
     e.preventDefault()
