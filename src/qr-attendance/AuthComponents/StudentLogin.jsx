@@ -18,7 +18,7 @@ export default function Signup() {
     try{
       setLoading(true)
       await signinWithGoogle()
-      console.log("logged in")
+      localStorage.setItem("role", "student")
       setRedirectPossible(true)
       setLoading(false)
     }catch(err){

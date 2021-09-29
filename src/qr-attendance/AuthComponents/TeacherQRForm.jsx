@@ -78,7 +78,7 @@ export default function TeacherQRForm() {
     <>
       <Container className="main row p-0 m-0" style={{height: "100vh"}} fluid>
         <Container style={{height: "50vh", background: "#2c2f40"}} className="main p-0 m-0">
-          <NavBar show={false}/>
+          <NavBar show={true}/>
           <div>
             <Image src={qr} alt='someImage' thumbnail style={{height: "auto"}}/>
           </div>
