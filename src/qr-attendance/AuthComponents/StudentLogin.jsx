@@ -8,7 +8,7 @@ import NavBar from '../components/NavBar'
 export default function Signup() {
   const [loading, setLoading] = useState(false)
   const [redirectPossible, setRedirectPossible] = useState(false)
-  const { signinWithGoogle } = useAuth()
+  const { signinWithGoogle, currentUser } = useAuth()
   async function handleSigninWithGoogle(e){
     e.preventDefault()
     try{
@@ -25,6 +25,7 @@ export default function Signup() {
   return (
     <Container className="main login p-0 m-0" fluid style={{height: "100vh"}}>
       {redirectPossible && <Redirect to="/scan-qr" />}
+      {currentUser && <Redirect to="/scan-qr" />}
       <NavBar show={false}/>
       <Container className="main row">
         <div className="main heading breakpoint" style={{color: "#c7ccec"}}>QR Attendance</div>
