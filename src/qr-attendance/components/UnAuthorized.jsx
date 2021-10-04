@@ -7,7 +7,7 @@ export default function UnAuthorized() {
     <>
       <Container style={{height: "75vh"}} fluid className="d-flex justify-content-center align-items-center">
         <NavBar show={true}/>
-        <div className="heading breakpoint">
+        <div className="headind">
           <div className="react-heading">
             You don't have access to this route!!
           </div>
