@@ -17,7 +17,7 @@ export default function Main() {
           role ==="teacher" && <Redirect to={'/make-qr'}/>
         )}
         <NavBar show={false}/>
-        <div className="heading breakpoint">
+        <div className="heading">
           <div className="react-heading">
            QR Attendance
           </div>
