@@ -3,32 +3,34 @@ import { Container } from 'react-bootstrap'
 import NavBar from './NavBar'
 import { Redirect } from 'react-router-dom'
 import { useAuth } from '../Context'
+import scan from '../pics/qrImg.png'
 
 export default function Main() {
   const role = localStorage.getItem("role")
   const { currentUser } = useAuth()
   return (
-    <>
-      <Container style={{height: "75vh"}} fluid className="d-flex justify-content-center align-items-center">
+    <div style={{backgroundColor: "#c7ccec", height: "100vh"}}>
+      <NavBar show={false} color={"#2c2f40"}/>
+      <Container style={{height: "80vh"}} fluid className="d-flex flex-column justify-content-center align-items-center">
         {currentUser && (
           role ==="student" && <Redirect to={'/scan-qr'}/>
         )}
         {currentUser && (
           role ==="teacher" && <Redirect to={'/make-qr'}/>
         )}
-        <NavBar show={false}/>
-        <div className="heading">
+        <div className="heading breakpoint">
           <div className="react-heading">
            QR Attendance
           </div>
         </div>
+        <img src={scan} style={{height: "50vh", width: "50vh"}}/>
       </Container>
       <Container style={{height: "10vh"}}>
         <div className="d-flex justify-content-evenly">
-          <a href="/student-login" role="button" className="btn btn-primary">Student</a>
-          <a href="/teacher-login" role="button" className="btn btn-primary">Teacher</a>
+          <a href="/student-login" role="button" className="btn btn-primary bord">Student</a>
+          <a href="/teacher-login" role="button" className="btn btn-primary bord">Teacher</a>
         </div>
       </Container>
-    </>
+    </div>
   )
 }
