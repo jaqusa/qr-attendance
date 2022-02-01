@@ -6,7 +6,7 @@ import { faInstagram, faGithub, faFacebookF, faLinkedinIn} from '@fortawesome/fr
 import { Redirect } from 'react-router-dom'
 import { useAuth } from '../Context'
 
-export default function NavBar({show}) {
+export default function NavBar({show, color = "#c7ccec"}) {
   const [redirectPossible, setRedirectPossible] = useState(false)
   function something() {
     setRedirectPossible(true)
@@ -18,7 +18,7 @@ export default function NavBar({show}) {
     <div>
       <Navbar bg="transparent" fixed="top" variant="light">
         {redirectPossible && <Redirect to="/"/>}
-        <Navbar.Brand href="#home" className="px-3" style={{color: "#c7ccec"}}>
+        <Navbar.Brand href="#home" className="px-3" style={{color: color}}>
             <strong>Niku419</strong>
         </Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
@@ -32,7 +32,7 @@ export default function NavBar({show}) {
                 </Tooltip>
               )}
             >
-              <Nav.Link href="https://github.com/niku419" ><FontAwesomeIcon icon={faGithub} size="lg" color= "#c7ccec" /></Nav.Link>
+              <Nav.Link href="https://github.com/niku419" ><FontAwesomeIcon icon={faGithub} size="lg" color={color} /></Nav.Link>
             </OverlayTrigger>
             <OverlayTrigger
               placement="bottom"
@@ -43,7 +43,7 @@ export default function NavBar({show}) {
                 </Tooltip>
               )}
             >
-              <Nav.Link href="https://linkedin.com/niku_419"><FontAwesomeIcon icon={faLinkedinIn} size="lg" color= "#c7ccec" /></Nav.Link>
+              <Nav.Link href="https://linkedin.com/niku_419"><FontAwesomeIcon icon={faLinkedinIn} size="lg" color= {color} /></Nav.Link>
             </OverlayTrigger>
             <OverlayTrigger
               placement="bottom"
@@ -54,7 +54,7 @@ export default function NavBar({show}) {
                 </Tooltip>
               )}
             >
-              <Nav.Link href="https://instagram.com/_niku_419"><FontAwesomeIcon icon={faInstagram} size="lg" color= "#c7ccec"/></Nav.Link>
+              <Nav.Link href="https://instagram.com/_niku_419"><FontAwesomeIcon icon={faInstagram} size="lg" color= {color}/></Nav.Link>
             </OverlayTrigger>
             <OverlayTrigger
               placement="bottom"
@@ -65,7 +65,7 @@ export default function NavBar({show}) {
                 </Tooltip>
               )}
             >
-              <Nav.Link href="#"><FontAwesomeIcon icon={faFacebookF} color= "#c7ccec"size="lg"/></Nav.Link>
+              <Nav.Link href="#"><FontAwesomeIcon icon={faFacebookF} color= {color}size="lg"/></Nav.Link>
             </OverlayTrigger>
             {show && <OverlayTrigger
               placement="bottom"
@@ -76,7 +76,7 @@ export default function NavBar({show}) {
                 </Tooltip>
               )}
             >
-              <Nav.Link href="#" onClick={something} ><FontAwesomeIcon  icon={faUserLock} size="lg" color= "#c7ccec"/></Nav.Link>
+              <Nav.Link href="#" onClick={something} ><FontAwesomeIcon  icon={faUserLock} size="lg" color= {color}/></Nav.Link>
             </OverlayTrigger>}
           </Nav>
           {/* <Form inline>
