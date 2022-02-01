@@ -54,6 +54,9 @@ a{
   border: solid 2px #c7ccec !important;
   border-color: #c7ccec !important;
 }
+.bord{
+  border-color: #2c2f40 !important;
+}
 .btn-primary:hover {
   color: #e2e7f6 !important;
   background-color: #767da7 !important;
