@@ -23,7 +23,7 @@ export default function Main() {
            QR Attendance
           </div>
         </div>
-        <img src={scan} alt="Dashboard Image" style={{height: "50vh", width: "50vh"}}/>
+        <img src={scan} alt="Dashboard" style={{height: "50vh", width: "50vh"}}/>
       </Container>
       <Container style={{height: "10vh"}}>
         <div className="d-flex justify-content-evenly">
