@@ -69,7 +69,7 @@ export default function AttendanceDetails() {
             <div className="imag d-flex justify-content-center"><img style={{height: "39vh"}} src={QRScan} alt="qrImg"/></div>
             <div className="heading"><div className="react-heading">Attendance</div>Details</div>
           </Container>
-          <Container style={{height: "50vh", background: "#2c2f40"}} className="main">
+          <Container style={{height: "50vh", background: "#001e37"}} className="main">
             <Form onSubmit={handleSubmit} style={{height: "30vh"}} className="p-0 m-0 main justify-content-evenly row">
               <Form.Control
                 onChange={e => setCourse(e.target.value)} 
@@ -96,7 +96,7 @@ export default function AttendanceDetails() {
               </div>
             </Form>
           </Container>
-          <Container style={{height: "10vh", background: "#2c2f40"}}>
+          <Container style={{height: "10vh", background: "#001e37"}}>
             <div className="d-flex justify-content-start">
               <a href="/make-qr" role="button" className="btn btn-primary">Take Attendance</a>
             </div>

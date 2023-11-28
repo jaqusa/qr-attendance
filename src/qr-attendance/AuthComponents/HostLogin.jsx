@@ -14,28 +14,27 @@ export default function Signup() {
     try{
       setLoading(true)
       await signinWithGoogle()
-      localStorage.setItem("role", "student")
+      localStorage.setItem("role", "host")
       setRedirectPossible(true)
       setLoading(false)
     }catch(err){
-      console.log("error")
       alert("There was an error signing in!!")
     }
   }
   return (
-    <Container className="main login p-0 m-0" fluid style={{height: "100vh"}}>
-      {redirectPossible && <Redirect to="/scan-qr" />}
-      {currentUser && <Redirect to="/scan-qr" />}
+    <Container fluid className="main p-0 m-0 login" style={{height: "100vh"}}>
+      {redirectPossible && <Redirect to="/make-qr" />}
+      {currentUser && <Redirect to="/make-qr" />}
       <NavBar show={false}/>
       <Container className="main row">
-        <div className="main heading breakpoint" style={{color: "#c7ccec"}}>QR Attendance</div>
-        <GoogleButton
+        <div className="main heading breakpoint" style={{color: "#c7ccec"}}>Event Name (Host)</div>
+        {/* <GoogleButton
           onClick={handleSigninWithGoogle}
           disabled={loading}
           className="style-button pl-0"
           style={{textAlign: "start"}}
-        />
-        <div className="d-flex justify-content-center" ><a className="href-style m-0 pl-2" href="/teacher-login">Login as Teacher</a></div>
+        /> */}
+        <div className="d-flex justify-content-center" ><a className="href-style m-0 pl-2" href="/student-login">Login as student</a></div>
       </Container>
     </Container>
   )

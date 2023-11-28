@@ -1,34 +1,33 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import NavBar from './NavBar'
-import { Redirect } from 'react-router-dom'
-import { useAuth } from '../Context'
+// import { Redirect } from 'react-router-dom'
 import scan from '../pics/qrImg.png'
 
 export default function Main() {
-  const role = localStorage.getItem("role")
-  const { currentUser } = useAuth()
+  const role = "host"
+
   return (
-    <div style={{backgroundColor: "#c7ccec", height: "100vh"}}>
-      <NavBar show={false} color={"#2c2f40"}/>
+    <div style={{backgroundColor: "#008aff", height: "100vh"}}>
+      <NavBar show={false} color={"#001e37"}/>
       <Container style={{height: "80vh"}} fluid className="d-flex flex-column justify-content-center align-items-center">
-        {currentUser && (
-          role ==="student" && <Redirect to={'/scan-qr'}/>
+        {/* {false && (
+          role ==="guest" && <Redirect to={'/scan-qr'}/>
         )}
-        {currentUser && (
-          role ==="teacher" && <Redirect to={'/make-qr'}/>
-        )}
+        {false && (
+          role ==="host" && <Redirect to={'/make-qr'}/>
+        )} */}
         <div className="heading breakpoint">
           <div className="react-heading">
-           QR Attendance
+           La chela de los founders
           </div>
         </div>
         <img src={scan} alt="Dashboard" style={{height: "50vh", width: "50vh"}}/>
       </Container>
       <Container style={{height: "10vh"}}>
         <div className="d-flex justify-content-evenly">
-          <a href="/student-login" role="button" className="btn btn-primary bord">Student</a>
-          <a href="/teacher-login" role="button" className="btn btn-primary bord">Teacher</a>
+          <a href="/guest-login" role="button" className="btn btn-primary bord">Guest</a>
+          <a href="/host-login" role="button" className="btn btn-primary bord">Host</a>
         </div>
       </Container>
     </div>

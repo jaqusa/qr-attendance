@@ -18,7 +18,7 @@ export default function NavBar({show, color = "#c7ccec"}) {
     <div>
       <Navbar bg="transparent" fixed="top" variant="light">
         {redirectPossible && <Redirect to="/"/>}
-        <Navbar.Brand href="#home" className="px-3" style={{color: color}}>
+        {/* <Navbar.Brand href="#home" className="px-3" style={{color: color}}>
             <strong>Niku419</strong>
         </Navbar.Brand>
         <Navbar.Collapse className="justify-content-end">
@@ -78,7 +78,7 @@ export default function NavBar({show, color = "#c7ccec"}) {
             >
               <Nav.Link href="#" onClick={something} ><FontAwesomeIcon  icon={faUserLock} size="lg" color= {color}/></Nav.Link>
             </OverlayTrigger>}
-          </Nav>
+          </Nav> */}
           {/* <Form inline>
             <Nav className="mr-auto"> 
               <Nav.Link>made for Hiku<FontAwesomeIcon color="#8d0101" icon={faHeart} /></Nav.Link>
@@ -91,7 +91,7 @@ export default function NavBar({show, color = "#c7ccec"}) {
               </Nav.Link>
             </Nav>
           </Form> */}
-        </Navbar.Collapse>
+        {/* </Navbar.Collapse> */}
       </Navbar>
     </div>
   )
