@@ -4,13 +4,12 @@ import 'firebase/database'
 import 'firebase/firestore'
 
 const app = firebase.initializeApp({
-  apiKey: "AIzaSyAHgkAzksb3IRRidwHX7JSKc-BEVvM9Of4",
-  authDomain: "qr--attendance.firebaseapp.com",
-  projectId: "qr--attendance",
-  storageBucket: "qr--attendance.appspot.com",
-  messagingSenderId: "263529499624",
-  appId: "1:263529499624:web:269ca45297fa2c50fff25d",
-  measurementId: "G-JCE4BGN3HV"
+  apiKey: "AIzaSyBPZFVN8wBtDCnInSswovzi8kjdHkTxDsc",
+  authDomain: "qr-chela-2e3f1.firebaseapp.com",
+  projectId: "qr-chela-2e3f1",
+  storageBucket: "qr-chela-2e3f1.appspot.com",
+  messagingSenderId: "319761367382",
+  appId: "1:319761367382:web:8a81c77c8f217ae14256f7"
 })
 const firestore = app.firestore()
 export const googleProvider = new firebase.auth.GoogleAuthProvider();
